@@ -1,6 +1,6 @@
 org: dzmitrykliapkouprotofire
-app: sampleproject
-service: sampleproject
+app: sampleproject-dev
+service: sampleproject-dev
 
 frameworkVersion: '3'
 
