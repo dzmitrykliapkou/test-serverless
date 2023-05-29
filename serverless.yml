@@ -8,6 +8,7 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: python3.9
+  cfnRole: "arn:aws:iam::${param:accountId}:role/strict-serverless-cloudformation-role"
 
 functions:
   rateHandler:
@@ -15,8 +16,3 @@ functions:
     events:
       # Invoke Lambda function every minute
       - schedule: rate(1 hour)
-  cronHandler:
-    handler: handler.run
-    events:
-      # Invoke Lambda function every 2nd minute from Mon-Fri
-      - schedule: cron(0/2 * ? * MON-FRI *)
