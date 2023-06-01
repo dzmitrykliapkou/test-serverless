@@ -1,7 +1,7 @@
 org: dzmitrykliapkouprotofire
 app: sampleproject-dev
 service: sampleproject-dev
-
+# trigger
 frameworkVersion: '3'
 
 
